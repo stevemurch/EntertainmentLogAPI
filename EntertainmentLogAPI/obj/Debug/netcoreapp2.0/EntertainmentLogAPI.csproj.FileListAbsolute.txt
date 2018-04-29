@@ -1,0 +1,11 @@
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\bin\Debug\netcoreapp2.0\EntertainmentLogAPI.deps.json
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\bin\Debug\netcoreapp2.0\EntertainmentLogAPI.runtimeconfig.json
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\bin\Debug\netcoreapp2.0\EntertainmentLogAPI.runtimeconfig.dev.json
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\bin\Debug\netcoreapp2.0\EntertainmentLogAPI.dll
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\bin\Debug\netcoreapp2.0\EntertainmentLogAPI.pdb
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.csprojResolveAssemblyReference.cache
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.csproj.CoreCompileInputs.cache
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.AssemblyInfoInputs.cache
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.AssemblyInfo.cs
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.dll
+C:\build\EntertainmentLogAPI\EntertainmentLogAPI\obj\Debug\netcoreapp2.0\EntertainmentLogAPI.pdb
