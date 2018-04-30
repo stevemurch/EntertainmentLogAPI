@@ -24,7 +24,16 @@ namespace EntertainmentLogAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddCors();
+            //services.AddCors();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,10 +43,8 @@ namespace EntertainmentLogAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(
-               options => options.WithOrigins("http://localhost:4200").AllowAnyMethod()
-           );
 
+            app.UseCors("CorsPolicy");
 
             app.UseMvc();
         }

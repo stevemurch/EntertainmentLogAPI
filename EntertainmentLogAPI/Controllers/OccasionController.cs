@@ -31,7 +31,13 @@ namespace EntertainmentLogAPI.Controllers
         [HttpPost]
         public void Post([FromBody]Occasion value)
         {
+            int x=1;
+
         }
+
+        [HttpOptions]
+        public void Options()
+        { }
         
         // PUT: api/occasion/5
         [HttpPut("{id}")]
