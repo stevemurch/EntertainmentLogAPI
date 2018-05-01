@@ -16,7 +16,7 @@ namespace EntertainmentLogAPI.Controllers
         [HttpGet]
         public IEnumerable<Occasion> Get()
         {
-            return Occasion.GetAll();
+            return Occasion.GetAllFromDb();
         }
 
         // GET: api/occasion/5

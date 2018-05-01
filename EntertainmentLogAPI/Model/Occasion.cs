@@ -13,7 +13,7 @@ namespace EntertainmentLogAPI.Model
 
     public class Occasion
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         public string Title {  get; set; }
         public DateTime? Date { get; set; }
         public List<Person> Persons { get; set; }
@@ -25,11 +25,15 @@ namespace EntertainmentLogAPI.Model
         {
 
             MongoDBContext dbContext = new MongoDBContext();
-            occ.Id = Guid.NewGuid();
+            occ.Id = Guid.NewGuid().ToString();
             dbContext.Occasions.InsertOne(occ);
             return occ;
-           
+        }
 
+        internal static IEnumerable<Occasion> GetAllFromDb()
+        {
+            MongoDBContext dbContext = new MongoDBContext();
+            return dbContext.Occasions.Find(m=>true).ToList();
         }
 
 
