@@ -29,10 +29,10 @@ namespace EntertainmentLogAPI.Controllers
         
         // POST: api/occasion
         [HttpPost]
-        public void Post([FromBody]Occasion value)
+        public Occasion Post([FromBody]Occasion value)
         {
-            int x=1;
-
+            var result = Occasion.AddOccasion(value);
+            return result;
         }
 
         [HttpOptions]

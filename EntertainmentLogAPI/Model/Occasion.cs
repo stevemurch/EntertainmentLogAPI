@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static EntertainmentLogAPI.Model.MongoDbContext;
 
 namespace EntertainmentLogAPI.Model
 {
@@ -11,11 +13,25 @@ namespace EntertainmentLogAPI.Model
 
     public class Occasion
     {
+        public Guid Id { get; set; }
         public string Title {  get; set; }
         public DateTime? Date { get; set; }
         public List<Person> Persons { get; set; }
         public string Notes { get; set; }
         public OccasionType Type { get; set; }
+
+
+        public static Occasion AddOccasion(Occasion occ)
+        {
+
+            MongoDBContext dbContext = new MongoDBContext();
+            occ.Id = Guid.NewGuid();
+            dbContext.Occasions.InsertOne(occ);
+            return occ;
+           
+
+        }
+
 
         internal static IEnumerable<Occasion> GetAll()
         {
