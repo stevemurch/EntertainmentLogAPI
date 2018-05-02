@@ -26,7 +26,7 @@ namespace EntertainmentLogAPI.Model
                         settings.SslSettings = new SslSettings { EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12 };
                     }
                     var mongoClient = new MongoClient(settings);
-                    _database = mongoClient.GetDatabase(DatabaseName);
+                    _database = mongoClient.GetDatabase(DatabaseName).WithWriteConcern(WriteConcern.Acknowledged);
                 }
                 catch (Exception ex)
                 {

@@ -33,7 +33,7 @@ namespace EntertainmentLogAPI.Model
         internal static IEnumerable<Occasion> GetAllFromDb()
         {
             MongoDBContext dbContext = new MongoDBContext();
-            return dbContext.Occasions.Find(m=>true).ToList();
+            return dbContext.Occasions.Find(m=>true).SortByDescending(x=>x.Date).ToList();
         }
 
 
