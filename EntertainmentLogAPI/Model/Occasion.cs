@@ -67,7 +67,9 @@ namespace EntertainmentLogAPI.Model
 
         internal static void DeleteById(string id)
         {
-            
+            MongoDBContext dbContext = new MongoDBContext();
+            dbContext.Occasions.DeleteOne(m => m.Id==id);
+            return;
         }
 
         internal static Occasion AddNew(
@@ -77,9 +79,7 @@ namespace EntertainmentLogAPI.Model
             OccasionType type)
         {
             Occasion theNewOccasion = new Occasion();
-
             return theNewOccasion;
-
         }
     }
 }
